@@ -6,7 +6,7 @@ This repository presents an alternative model for primality testing using freque
 
 ## Contenido / Contents
 
-- `criba_frecuencias.pdf`: Documento en Epañol.
+- `empiric_prime_sieve(en).pdf`: Documento en Epañol.
 
 
 ## Autor / Author
