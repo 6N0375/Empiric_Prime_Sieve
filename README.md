@@ -6,8 +6,8 @@ This repository presents an alternative model for primality testing using freque
 
 ## Contenido / Contents
 
-- `docs/es/criba_por_frecuencias.md`: Documento teórico en español.
-- `docs/en/frequency_sieve.md`: Theoretical document in English.
+- `criba_frecuencias.pdf`: Documento en Epañol.
+- `prime_sieve_frecuencies.pdf`: Theoretical document in English.
 
 ## Autor / Author
 
