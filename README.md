@@ -9,7 +9,7 @@ This repository contains an alternative method to detect prime numbers based on 
 
 ## 📄 Documentation
 
-- **Theoretical Foundation (English)**: [empiric prime sieve (en).pdf](./empiric prime sieve (en).pdf)  
+- **Theoretical Foundation (English)**: [empiric prime sieve (en).pdf]
   Full description of the frequency-based sieve, including the base sequence, generation of frequencies, and rules for primality evaluation without traditional factorization.
 
 ---
