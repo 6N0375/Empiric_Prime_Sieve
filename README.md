@@ -1,38 +1,50 @@
-# Empirical Prime Sieve Project
+# Empiric Prime Sieve
 
-This repository presents a complete theoretical and practical exploration of a novel method to identify prime numbers based on cyclic frequency patterns derived from the 6n ± 1 number form.
+**Alternative method to identify prime numbers based on cyclic frequency cancellation.**
 
-## Repository Contents
+## Overview
 
-- 📄 `empiric_prime_sieve.pdf`  
-  A comprehensive theoretical document detailing the foundations of the frequency-based sieve model, including its mathematical basis, structure, and implications. This serves as the core explanation of the model.
+This project presents an alternative sieve for prime detection, derived from empirical observation of arithmetic patterns. It focuses exclusively on numbers of the form \(6n \pm 1\), exploiting their internal modular properties to build a list of primes greater than 3.
 
-- 📁 `prime_sieve/`  
-  This folder contains the implementation of the sieve in Python and two Jupyter notebooks:
-  
-  - `verified_sieve_100M_validated.ipynb`: Performs the sieve up to 100 million and validates the results.
-  - `verified_sieve_10M_validated.ipynb`: A lightweight version up to 10 million for quick testing.
-  - `empiric_frequency_sieve.py`: The Python module implementing the model.
+The model uses a system of **cyclic frequencies** that systematically eliminate composites without the need for factorization or divisibility checks.
 
-- 📁 `empiric_predictive_checker/`  
-  This submodule explores a predictive approach to primality based on pattern collisions. It attempts to verify the primality of an individual number without generating full lists, using cyclical frequencies and a bounded window derived from the square of the candidate number.
+## Key Concepts
 
-## Highlights
+- **Base Sequence**: All primes greater than 3 appear within the sequence \(6n \pm 1\).
+- **Frequency Pattern**: Each number in this sequence is associated with two frequencies derived from modified multiples of 4. These frequencies are applied in an alternating manner to eliminate composites.
+- **Structured Cancellation**: The algorithm applies these frequencies in predictable, repeating cycles, enabling the detection of primes through cancellation alone.
 
-- ✅ Completely original approach not based on traditional factorization or probabilistic methods.
-- 🔁 Uses predictable cyclic patterns for elimination based on empirical observation.
-- 🔬 Fully validated up to 100 million primes using standard libraries such as `sympy`.
-- 📈 Performance demonstrated through benchmark notebooks.
-- 🧠 Includes a predictive primality checker that leverages cyclical structure and frequency overlap.
+## Python Implementation
 
-## How to Get Started
+The implementation is written in Python and focuses exclusively on:
 
-1. Review the theoretical model in `empiric_prime_sieve.pdf`.
-2. Use the notebooks in `prime_sieve/` to test and explore the implementation.
-3. Explore the predictive module in `empiric_predictive_checker/` for individual primality analysis.
-4. Upload the required Python files when prompted in the notebooks (e.g. in Google Colab).
+- Generating a base list of numbers of the form \(6n \pm 1\).
+- Associating each number with its corresponding frequencies.
+- Applying the cancellation pattern to identify and remove composite numbers.
+
+⚠️ The current version does **not** perform individual primality testing for arbitrary numbers. The project focuses on list generation through the sieve mechanism.
+
+## Performance
+
+- Efficient for generating lists up to several million entries.
+- Fully adheres to the theoretical structure of the cyclic sieve.
+- No factorization or modulo operations involved in the cancellation process.
+
+## Limitations
+
+- Does not cover primes < 5 (these must be verified separately).
+- Applies only to the subset \(6n \pm 1\).
+- Formal mathematical proof is still under development.
+- Performance over extremely large ranges is currently limited by lack of optimization.
+
+## Future Work
+
+- Optimize frequency storage and reuse.
+- Implement parallel processing for large-scale ranges.
+- Explore vectorized applications of cancellation blocks.
+- Formalize theoretical foundations.
 
 ## License
 
-Author: Hector Cárdenas Campos  
-License: Non-commercial use only
+Non-commercial use only.  
+Author: Héctor Cárdenas Campos
