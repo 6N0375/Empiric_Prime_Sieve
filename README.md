@@ -1,29 +1,25 @@
 # Empiric Prime Sieve
 
-This repository presents an alternative approach to prime number identification based on cyclic frequency analysis, derived from empirical observations of the structure of numbers of the form \(6n \pm 1\).
+This repository presents an alternative method to identify prime numbers based on empiric observation and cyclic frequency patterns.
 
-## Description
+## Overview
 
-The core idea of this model is that prime numbers greater than 3 can be detected through predictable patterns called **cyclic frequencies**, without relying on traditional factorization or prior knowledge of existing primes.
-
-Unlike the Sieve of Eratosthenes or probabilistic tests, this method operates by observing arithmetic regularities within a sequence derived from simple operations. The result is a sieve-like mechanism that marks composite numbers through the detection of frequency-based collisions.
+The model focuses on numbers of the form \(6n \pm 1\), using alternating cyclic frequency filters to predict and eliminate composite numbers. Unlike traditional sieves or probabilistic tests, this model does not rely on factorization or modular arithmetic.
 
 ## Contents
 
-- `empiric_sieve_validation.py`:  
-  Python script to test the empirical sieve against SymPy’s standard list of primes, validating its consistency with known results up to a specified range.
+- `Empirical Cyclic Frequency Sieve.pdf`  
+  A complete theoretical document (in English) that explains the mathematical foundation, logic, and structure of the proposed sieve.
 
-- `Empiric_Prime_Sieve.pdf`:  
-  Theoretical document (in English) detailing the foundations, logic, and structure of the proposed frequency-based sieve method.
+- `Empiric_sieve_generator/empiric_frequency_sieve.py`  
+  Python implementation of the sieve logic to generate and verify primes using cyclic frequencies.
 
-## How to Use
+- `Empiric_sieve_generator/verified_sieve_10M_validated.ipynb`  
+  Jupyter notebook that validates the sieve’s results up to 10 million numbers.
 
-Run the Python file using a standard Python interpreter. It will generate a list of prime numbers using the empirical sieve and compare it to the list provided by SymPy. Execution time and correctness are displayed at the end of the process.
+- `Empiric_sieve_generator/verified_sieve_100M_validated.ipynb`  
+  Jupyter notebook that validates the sieve’s results up to 100 million numbers.
 
 ## License
 
-This project is released under a non-commercial license. For academic or research purposes only.
-
----
-
-Author: Héctor Cárdenas Campos
+This project is licensed for **non-commercial and academic use only**.
